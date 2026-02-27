@@ -2,11 +2,16 @@ name = "icc-orm-engine"
 main = "src/index.js"
 compatibility_date = "2024-01-01"
 
-[[services]]
-binding = "mission-comms"
-service = "icc-mission-communications"
-
 [[durable_objects.bindings]]
 name = "ORM_STATE"
 class_name = "ORM_STATE"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["ORM_STATE"]
+
+[[services]]
+binding = "mission-comms"
+service = "mission-comms"
+
 
